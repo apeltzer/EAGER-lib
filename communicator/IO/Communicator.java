@@ -46,6 +46,7 @@ public class Communicator implements Serializable {
      */
     private String cpucores;
     private String maxmemory;
+    private boolean usesystemtmpdir;
 
 
     /**
@@ -276,8 +277,7 @@ public class Communicator implements Serializable {
         gatk_ploidy = "2";
         snpcapture_type = "390K";
         damageProfilerOnlyMerged = false;
-
-
+        usesystemtmpdir = true;
 
     }
 
@@ -1083,4 +1083,8 @@ public class Communicator implements Serializable {
     public void setMerge_barcode5p(String merge_barcode5p) {
         this.merge_barcode5p = merge_barcode5p;
     }
+
+    public boolean isUsesystemtmpdir() { return usesystemtmpdir; }
+
+    public void setUsesystemtmpdir(boolean usesystemtmpdir) { this.usesystemtmpdir = usesystemtmpdir; }
 }
