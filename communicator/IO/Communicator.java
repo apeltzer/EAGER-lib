@@ -244,7 +244,7 @@ public class Communicator implements Serializable {
         mapper_bwamem_advanced = "";
         filter_for_mt = "chrMT";
         mapdamage_length = "100";
-        schmutzi_library_type = "DOUBLE";
+        schmutzi_library_type = "double";
         bedfile = "/opt/snpcc/390KPos.bed";
         gatk_standard_call_confidence = "50";
         gatk_standard_emit_confidence = "10";
