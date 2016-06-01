@@ -64,6 +64,7 @@ public class Communicator implements Serializable {
     private String merge_type = "";
     private String merge_barcode3p = "0";
     private String merge_barcode5p = "0";
+    private boolean merge_keep_only_merged = false;
 
     /**
      * 2-QualityTrimmer
@@ -1087,4 +1088,12 @@ public class Communicator implements Serializable {
     public boolean isUsesystemtmpdir() { return usesystemtmpdir; }
 
     public void setUsesystemtmpdir(boolean usesystemtmpdir) { this.usesystemtmpdir = usesystemtmpdir; }
+
+    public boolean isMerge_keep_only_merged() {
+        return merge_keep_only_merged;
+    }
+
+    public void setMerge_keep_only_merged(boolean merge_keep_only_merged) {
+        this.merge_keep_only_merged = merge_keep_only_merged;
+    }
 }
