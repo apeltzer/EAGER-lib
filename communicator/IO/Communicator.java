@@ -28,6 +28,11 @@ import java.util.ArrayList;
  */
 public class Communicator implements Serializable {
     /**
+    * EAGER version
+    **/
+    private String eager_version;
+
+    /**
      * I/O Required Information
      */
     private String GUI_filepathinput;
@@ -108,6 +113,7 @@ public class Communicator implements Serializable {
      */
 
     private boolean rmdup_run;
+    private boolean rmdup_all_reads_as_merged;
     private boolean markdup_run;
 
     /**
@@ -228,6 +234,7 @@ public class Communicator implements Serializable {
 
     public Communicator() {
         //Setting up default values for all the values, except input GUI_inputfiles.
+        eager_version = "Unknown";
         cpucores = "4";
         CM_elongationfac = 500;
         CM_tobemapped_against = "chrMT";
@@ -280,6 +287,14 @@ public class Communicator implements Serializable {
         damageProfilerOnlyMerged = false;
         usesystemtmpdir = true;
 
+    }
+
+    public String getEager_version() {
+      return eager_version;
+    }
+
+    public void setEager_verison (String eager_version) {
+      this.eager_version = eager_version;
     }
 
     public int getPreseq_ccurve_stepsize() {
@@ -817,6 +832,14 @@ public class Communicator implements Serializable {
 
     public void setRmdup_run(boolean rmdup_run) {
         this.rmdup_run = rmdup_run;
+    }
+
+    public boolean isRmdup_allReadsAsMerged() {
+        return rmdup_all_reads_as_merged;
+    }
+
+    public void setRmdup_allReadsAsMerged (boolean rmdup_all_reads_as_merged) {
+        this.rmdup_all_reads_as_merged = rmdup_all_reads_as_merged;
     }
 
     public boolean isSnpcapturedata() {
