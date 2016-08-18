@@ -293,7 +293,7 @@ public class Communicator implements Serializable {
       return eager_version;
     }
 
-    public void setEager_verison (String eager_version) {
+    public void setEager_version (String eager_version) {
       this.eager_version = eager_version;
     }
 
