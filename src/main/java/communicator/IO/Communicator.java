@@ -16,6 +16,8 @@
 
 package IO;
 
+import sun.plugin2.gluegen.runtime.CPU;
+
 import java.io.Serializable;
 import java.util.ArrayList;
 
@@ -115,6 +117,17 @@ public class Communicator implements Serializable {
     private boolean rmdup_run;
     private boolean rmdup_all_reads_as_merged;
     private boolean markdup_run;
+
+
+    /**
+     * PMD tools
+     */
+
+    private String pmdtools_advanced;
+    private String pmdtoolsThreshold;
+    private String cpGRange;
+    private boolean PMDSFilter;
+    private boolean CpGRestriction;
 
     /**
      * QualiMap
@@ -231,6 +244,7 @@ public class Communicator implements Serializable {
     private boolean run_reportgenerator;
     private boolean run_mapping_extractmappedandunmapped;
     private boolean run_mt_capture_mode;
+    private boolean run_pmdtools;
 
 
 
@@ -292,6 +306,13 @@ public class Communicator implements Serializable {
         snpcapture_type = "390K";
         damageProfilerOnlyMerged = false;
         usesystemtmpdir = true;
+        pmdtools_advanced = "";
+        pmdtoolsThreshold = "3";
+        cpGRange = "30";
+        PMDSFilter = true;
+        CpGRestriction = false;
+
+
 
     }
 
@@ -1148,5 +1169,53 @@ public class Communicator implements Serializable {
 
     public void setMerge_keep_only_merged(boolean merge_keep_only_merged) {
         this.merge_keep_only_merged = merge_keep_only_merged;
+    }
+
+    public String getPmdtools_advanced() {
+        return pmdtools_advanced;
+    }
+
+    public void setPmdtools_advanced(String pmdtools_advanced) {
+        this.pmdtools_advanced = pmdtools_advanced;
+    }
+
+    public String getPmdtoolsThreshold() {
+        return pmdtoolsThreshold;
+    }
+
+    public void setPmdtoolsThreshold(String pmdtoolsThreshold) {
+        this.pmdtoolsThreshold = pmdtoolsThreshold;
+    }
+
+    public String getCpGRange() {
+        return cpGRange;
+    }
+
+    public void setCpGRange(String cpGRange) {
+        this.cpGRange = cpGRange;
+    }
+
+    public boolean isPMDSFilter() {
+        return PMDSFilter;
+    }
+
+    public void setPMDSFilter(boolean PMDSFilter) {
+        this.PMDSFilter = PMDSFilter;
+    }
+
+    public boolean isCpGRestriction() {
+        return CpGRestriction;
+    }
+
+    public void setCpGRestriction(boolean cpGRestriction) {
+        CpGRestriction = cpGRestriction;
+    }
+
+    public boolean isRun_pmdtools() {
+        return run_pmdtools;
+    }
+
+    public void setRun_pmdtools(boolean run_pmdtools) {
+        this.run_pmdtools = run_pmdtools;
     }
 }
