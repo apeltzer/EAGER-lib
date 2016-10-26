@@ -16,8 +16,6 @@
 
 package IO;
 
-import sun.plugin2.gluegen.runtime.CPU;
-
 import java.io.Serializable;
 import java.util.ArrayList;
 
