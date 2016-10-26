@@ -16,6 +16,8 @@
 
 package IO;
 
+import sun.plugin2.gluegen.runtime.CPU;
+
 import java.io.Serializable;
 import java.util.ArrayList;
 
@@ -116,6 +118,17 @@ public class Communicator implements Serializable {
     private boolean rmdup_all_reads_as_merged;
     private boolean markdup_run;
 
+
+    /**
+     * PMD tools
+     */
+
+    private String pmdtools_advanced;
+    private String pmdtoolsThreshold;
+    private String cpGRange;
+    private boolean PMDSFilter;
+    private boolean CpGRestriction;
+
     /**
      * QualiMap
      */
@@ -140,6 +153,9 @@ public class Communicator implements Serializable {
     private String mapdamage_onlymerged;
     private String DNA_damage_calculator_to_use;
     private boolean damageProfilerOnlyMerged;
+    private String damageProfiler_length;
+    private String damageProfiler_threshold;
+    private String damageProfiler_advanced;
 
     /**
      * 7-Preseq
@@ -228,6 +244,7 @@ public class Communicator implements Serializable {
     private boolean run_reportgenerator;
     private boolean run_mapping_extractmappedandunmapped;
     private boolean run_mt_capture_mode;
+    private boolean run_pmdtools;
 
 
 
@@ -252,6 +269,8 @@ public class Communicator implements Serializable {
         mapper_bwamem_advanced = "";
         filter_for_mt = "chrMT";
         mapdamage_length = "100";
+        damageProfiler_length = "100";
+        damageProfiler_threshold = "25";
         schmutzi_library_type = "double";
         bedfile = "/opt/snpcc/390KPos.bed";
         gatk_standard_call_confidence = "50";
@@ -278,6 +297,7 @@ public class Communicator implements Serializable {
         fastqc_advanced = "";
         gatk_snp_advanced = "";
         mapdamage_advanced = "";
+        damageProfiler_advanced = "";
         mapper_advanced = "";
         merge_advanced = "";
         vcf2draft_advanced = "";
@@ -286,6 +306,13 @@ public class Communicator implements Serializable {
         snpcapture_type = "390K";
         damageProfilerOnlyMerged = false;
         usesystemtmpdir = true;
+        pmdtools_advanced = "";
+        pmdtoolsThreshold = "3";
+        cpGRange = "30";
+        PMDSFilter = true;
+        CpGRestriction = false;
+
+
 
     }
 
@@ -439,6 +466,30 @@ public class Communicator implements Serializable {
 
     public void setMapdamage_length(String mapdamage_length) {
         this.mapdamage_length = mapdamage_length;
+    }
+
+    public String getDamageProfiler_length() {
+        return damageProfiler_length;
+    }
+
+    public void setDamageProfiler_length(String damageProfiler_length) {
+        this.damageProfiler_length = damageProfiler_length;
+    }
+
+    public String getDamageProfiler_threshold() {
+        return damageProfiler_threshold;
+    }
+
+    public void setDamageProfiler_threshold(String damageProfiler_threshold) {
+        this.damageProfiler_threshold = damageProfiler_threshold;
+    }
+
+    public String getDamageProfiler_advanced() {
+        return damageProfiler_advanced;
+    }
+
+    public void setDamageProfiler_advanced(String damageProfiler_advanced) {
+        this.damageProfiler_advanced = damageProfiler_advanced;
     }
 
     public String getGUI_GATKSNPreference() {
@@ -1118,5 +1169,53 @@ public class Communicator implements Serializable {
 
     public void setMerge_keep_only_merged(boolean merge_keep_only_merged) {
         this.merge_keep_only_merged = merge_keep_only_merged;
+    }
+
+    public String getPmdtools_advanced() {
+        return pmdtools_advanced;
+    }
+
+    public void setPmdtools_advanced(String pmdtools_advanced) {
+        this.pmdtools_advanced = pmdtools_advanced;
+    }
+
+    public String getPmdtoolsThreshold() {
+        return pmdtoolsThreshold;
+    }
+
+    public void setPmdtoolsThreshold(String pmdtoolsThreshold) {
+        this.pmdtoolsThreshold = pmdtoolsThreshold;
+    }
+
+    public String getCpGRange() {
+        return cpGRange;
+    }
+
+    public void setCpGRange(String cpGRange) {
+        this.cpGRange = cpGRange;
+    }
+
+    public boolean isPMDSFilter() {
+        return PMDSFilter;
+    }
+
+    public void setPMDSFilter(boolean PMDSFilter) {
+        this.PMDSFilter = PMDSFilter;
+    }
+
+    public boolean isCpGRestriction() {
+        return CpGRestriction;
+    }
+
+    public void setCpGRestriction(boolean cpGRestriction) {
+        CpGRestriction = cpGRestriction;
+    }
+
+    public boolean isRun_pmdtools() {
+        return run_pmdtools;
+    }
+
+    public void setRun_pmdtools(boolean run_pmdtools) {
+        this.run_pmdtools = run_pmdtools;
     }
 }
