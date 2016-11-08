@@ -269,6 +269,7 @@ public class Communicator implements Serializable {
         mapdamage_length = "100";
         damageProfiler_length = "100";
         damageProfiler_threshold = "25";
+        DNA_damage_calculator_to_use = "DamageProfiler";
         schmutzi_library_type = "double";
         bedfile = "/opt/snpcc/390KPos.bed";
         gatk_standard_call_confidence = "50";
