@@ -265,6 +265,7 @@ public class Communicator implements Serializable {
         mapper_bwamem_bandwidth = "100";
         mapper_bwamem_seedlength = "19";
         mapper_bwamem_advanced = "";
+        mapper_filter_unmapped = true;
         filter_for_mt = "chrMT";
         mapdamage_length = "100";
         damageProfiler_length = "100";
@@ -304,7 +305,7 @@ public class Communicator implements Serializable {
         gatk_ploidy = "2";
         snpcapture_type = "390K";
         damageProfilerOnlyMerged = false;
-        usesystemtmpdir = true;
+        usesystemtmpdir = false;
         pmdtools_advanced = "";
         pmdtoolsThreshold = "3";
         cpGRange = "30";
