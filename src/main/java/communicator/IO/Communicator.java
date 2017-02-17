@@ -214,7 +214,7 @@ public class Communicator implements Serializable {
     private boolean referenceselected;
     private int conflict;
     private boolean organism;
-    private boolean udgtreatment;
+    private String udgtreatment;
     private boolean pairmenttype;
     private boolean dbsnpreference;
     private boolean organismage;
@@ -280,7 +280,7 @@ public class Communicator implements Serializable {
         preseq_ccurve_stepsize = 1000;
         preseq_lcextrap_stepsize = 1000;
         preseq_lcextrap_bootstraps = 100;
-        preseq_lcextrap_extrapolationsize = "10000000000";
+        preseq_lcextrap_extrapolationsize = "1000000000";
         gatk_downsampling = "250";
         angsd_glf_model = "1";
         angsd_glm_outformat = "1";
@@ -661,11 +661,11 @@ public class Communicator implements Serializable {
         this.organism = organism;
     }
 
-    public boolean isUdgtreatment() {
+    public String getUdgtreatment() {
         return udgtreatment;
     }
 
-    public void setUdgtreatment(boolean udgtreatment) {
+    public void setUdgtreatment(String udgtreatment) {
         this.udgtreatment = udgtreatment;
     }
 
