@@ -39,6 +39,7 @@ public class Communicator implements Serializable {
     private String GUI_filepathresults;
     private ArrayList<String> GUI_inputfiles;
     private String GUI_reference;
+    private String GUI_reference_mask;
     private String GUI_resultspath;
     private String GUI_GATKSNPreference;
 
@@ -410,6 +411,14 @@ public class Communicator implements Serializable {
 
     public void setGUI_reference(String GUI_reference) {
         this.GUI_reference = GUI_reference;
+    }
+
+    public String getGUI_reference_mask() {
+        return GUI_reference_mask;
+    }
+
+    public void setGUI_reference_mask(String GUI_reference_mask) {
+        this.GUI_reference_mask = GUI_reference_mask;
     }
 
     public int getQuality_minreadquality() {
