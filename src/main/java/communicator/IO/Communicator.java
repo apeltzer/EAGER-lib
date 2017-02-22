@@ -126,7 +126,7 @@ public class Communicator implements Serializable {
     private String pmdtoolsThreshold;
     private String cpGRange;
     private boolean PMDSFilter;
-    private boolean CpGRestriction;
+    private boolean pmdtoolsCalcRange;
 
     /**
      * QualiMap
@@ -311,7 +311,7 @@ public class Communicator implements Serializable {
         pmdtoolsThreshold = "3";
         cpGRange = "30";
         PMDSFilter = true;
-        CpGRestriction = false;
+        pmdtoolsCalcRange = false;
 
 
 
@@ -1212,12 +1212,12 @@ public class Communicator implements Serializable {
         this.PMDSFilter = PMDSFilter;
     }
 
-    public boolean isCpGRestriction() {
-        return CpGRestriction;
+    public boolean isPmdtoolsCalcRange() {
+        return pmdtoolsCalcRange;
     }
 
-    public void setCpGRestriction(boolean cpGRestriction) {
-        CpGRestriction = cpGRestriction;
+    public void setPmdtoolsCalcRange(boolean pmdtoolsCalcRange) {
+        this.pmdtoolsCalcRange = pmdtoolsCalcRange;
     }
 
     public boolean isRun_pmdtools() {
