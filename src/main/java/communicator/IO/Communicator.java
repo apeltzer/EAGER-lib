@@ -221,6 +221,7 @@ public class Communicator implements Serializable {
     private boolean organismage;
     private boolean inputfastqselected;
     private boolean snpcapturedata;
+    private boolean calc_capture_on_target;
     private boolean input_already_merged;
     private boolean merge_bam_files;
 
@@ -312,7 +313,7 @@ public class Communicator implements Serializable {
         cpGRange = "30";
         PMDSFilter = true;
         pmdtoolsCalcRange = false;
-
+        calc_capture_on_target = false;
 
 
     }
@@ -1227,4 +1228,8 @@ public class Communicator implements Serializable {
     public void setRun_pmdtools(boolean run_pmdtools) {
         this.run_pmdtools = run_pmdtools;
     }
+
+    public boolean isCalcCaptureOnTarget() { return calc_capture_on_target; }
+
+    public void setCalc_capture_on_target(boolean calc_capture_on_target) { this.calc_capture_on_target = calc_capture_on_target;}
 }
