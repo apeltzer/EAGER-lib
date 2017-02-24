@@ -39,6 +39,7 @@ public class Communicator implements Serializable {
     private String GUI_filepathresults;
     private ArrayList<String> GUI_inputfiles;
     private String GUI_reference;
+    private String GUI_reference_mask;
     private String GUI_resultspath;
     private String GUI_GATKSNPreference;
 
@@ -125,7 +126,7 @@ public class Communicator implements Serializable {
     private String pmdtoolsThreshold;
     private String cpGRange;
     private boolean PMDSFilter;
-    private boolean CpGRestriction;
+    private boolean pmdtoolsCalcRange;
 
     /**
      * QualiMap
@@ -214,12 +215,13 @@ public class Communicator implements Serializable {
     private boolean referenceselected;
     private int conflict;
     private boolean organism;
-    private boolean udgtreatment;
+    private String udgtreatment;
     private boolean pairmenttype;
     private boolean dbsnpreference;
     private boolean organismage;
     private boolean inputfastqselected;
     private boolean snpcapturedata;
+    private boolean calc_capture_on_target;
     private boolean input_already_merged;
     private boolean merge_bam_files;
 
@@ -280,7 +282,7 @@ public class Communicator implements Serializable {
         preseq_ccurve_stepsize = 1000;
         preseq_lcextrap_stepsize = 1000;
         preseq_lcextrap_bootstraps = 100;
-        preseq_lcextrap_extrapolationsize = "10000000000";
+        preseq_lcextrap_extrapolationsize = "1000000000";
         gatk_downsampling = "250";
         angsd_glf_model = "1";
         angsd_glm_outformat = "1";
@@ -310,8 +312,8 @@ public class Communicator implements Serializable {
         pmdtoolsThreshold = "3";
         cpGRange = "30";
         PMDSFilter = true;
-        CpGRestriction = false;
-
+        pmdtoolsCalcRange = false;
+        calc_capture_on_target = false;
 
 
     }
@@ -410,6 +412,14 @@ public class Communicator implements Serializable {
 
     public void setGUI_reference(String GUI_reference) {
         this.GUI_reference = GUI_reference;
+    }
+
+    public String getGUI_reference_mask() {
+        return GUI_reference_mask;
+    }
+
+    public void setGUI_reference_mask(String GUI_reference_mask) {
+        this.GUI_reference_mask = GUI_reference_mask;
     }
 
     public int getQuality_minreadquality() {
@@ -661,11 +671,11 @@ public class Communicator implements Serializable {
         this.organism = organism;
     }
 
-    public boolean isUdgtreatment() {
+    public String getUdgtreatment() {
         return udgtreatment;
     }
 
-    public void setUdgtreatment(boolean udgtreatment) {
+    public void setUdgtreatment(String udgtreatment) {
         this.udgtreatment = udgtreatment;
     }
 
@@ -1203,12 +1213,12 @@ public class Communicator implements Serializable {
         this.PMDSFilter = PMDSFilter;
     }
 
-    public boolean isCpGRestriction() {
-        return CpGRestriction;
+    public boolean isPmdtoolsCalcRange() {
+        return pmdtoolsCalcRange;
     }
 
-    public void setCpGRestriction(boolean cpGRestriction) {
-        CpGRestriction = cpGRestriction;
+    public void setPmdtoolsCalcRange(boolean pmdtoolsCalcRange) {
+        this.pmdtoolsCalcRange = pmdtoolsCalcRange;
     }
 
     public boolean isRun_pmdtools() {
@@ -1218,4 +1228,8 @@ public class Communicator implements Serializable {
     public void setRun_pmdtools(boolean run_pmdtools) {
         this.run_pmdtools = run_pmdtools;
     }
+
+    public boolean isCalcCaptureOnTarget() { return calc_capture_on_target; }
+
+    public void setCalc_capture_on_target(boolean calc_capture_on_target) { this.calc_capture_on_target = calc_capture_on_target;}
 }
