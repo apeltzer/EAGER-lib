@@ -127,6 +127,9 @@ public class Communicator implements Serializable {
     private String cpGRange;
     private boolean PMDSFilter;
     private boolean pmdtoolsCalcRange;
+    private boolean CpGRestriction;
+
+
 
     /**
      * QualiMap
@@ -1232,4 +1235,24 @@ public class Communicator implements Serializable {
     public boolean isCalcCaptureOnTarget() { return calc_capture_on_target; }
 
     public void setCalc_capture_on_target(boolean calc_capture_on_target) { this.calc_capture_on_target = calc_capture_on_target;}
+
+    public boolean isRmdup_all_reads_as_merged() {
+        return rmdup_all_reads_as_merged;
+    }
+
+    public void setRmdup_all_reads_as_merged(boolean rmdup_all_reads_as_merged) {
+        this.rmdup_all_reads_as_merged = rmdup_all_reads_as_merged;
+    }
+
+    public boolean isCpGRestriction() {
+        return CpGRestriction;
+    }
+
+    public void setCpGRestriction(boolean cpGRestriction) {
+        CpGRestriction = cpGRestriction;
+    }
+
+    public boolean isCalc_capture_on_target() {
+        return calc_capture_on_target;
+    }
 }
