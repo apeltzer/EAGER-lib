@@ -64,6 +64,7 @@ public class Communicator implements Serializable {
      * 1-AdapterRM/Merging
      */
     private String merge_tool;
+    private int merge_min_adapter_overlap;
     private String merge_fwadaptor;
     private String merge_bwadaptor;
     private String merge_advanced;
@@ -265,6 +266,7 @@ public class Communicator implements Serializable {
         merge_tool = "CM";
         merge_fwadaptor = "AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC";
         merge_bwadaptor = "AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTA";
+        merge_min_adapter_overlap = 3;
         mapper_readgroup = "@RG\tID:ILLUMINA-52179E_0039_FC62HDBAAXX_1_1\tSM:48_2\tPL:illumina";
         mapper_seedlength = "32";
         mapper_mapquality_filter = "0";
@@ -1264,5 +1266,13 @@ public class Communicator implements Serializable {
 
     public void setMerge_tool(String merge_tool) {
         this.merge_tool = merge_tool;
+    }
+
+    public int getMerge_min_adapter_overlap() {
+        return merge_min_adapter_overlap;
+    }
+
+    public void setMerge_min_adapter_overlap(int merge_min_adapter_overlap) {
+        this.merge_min_adapter_overlap = merge_min_adapter_overlap;
     }
 }
