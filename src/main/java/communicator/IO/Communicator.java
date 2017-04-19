@@ -263,7 +263,7 @@ public class Communicator implements Serializable {
         maxmemory = "64";
         quality_minreadquality = 20;
         quality_readlength = 30;
-        merge_tool = "CM";
+        merge_tool = "Clip&Merge";
         merge_fwadaptor = "AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC";
         merge_bwadaptor = "AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTA";
         merge_min_adapter_overlap = 3;
