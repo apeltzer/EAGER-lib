@@ -61,8 +61,9 @@ public class Communicator implements Serializable {
     private String fastqc_advanced;
 
     /**
-     * 1-ClipAndMerge
+     * 1-AdapterRM/Merging
      */
+    private String merge_tool;
     private String merge_fwadaptor;
     private String merge_bwadaptor;
     private String merge_advanced;
@@ -261,6 +262,7 @@ public class Communicator implements Serializable {
         maxmemory = "64";
         quality_minreadquality = 20;
         quality_readlength = 30;
+        merge_tool = "CM";
         merge_fwadaptor = "AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC";
         merge_bwadaptor = "AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTA";
         mapper_readgroup = "@RG\tID:ILLUMINA-52179E_0039_FC62HDBAAXX_1_1\tSM:48_2\tPL:illumina";
@@ -1254,5 +1256,13 @@ public class Communicator implements Serializable {
 
     public boolean isCalc_capture_on_target() {
         return calc_capture_on_target;
+    }
+
+    public String getMerge_tool() {
+        return merge_tool;
+    }
+
+    public void setMerge_tool(String merge_tool) {
+        this.merge_tool = merge_tool;
     }
 }
