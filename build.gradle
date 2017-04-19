@@ -1,5 +1,5 @@
 group 'com.uni-tuebingen.de.it.eager.EAGER-lib'
-version '1.92.22'
+version '1.92.23'
 
 buildscript {
     repositories {
