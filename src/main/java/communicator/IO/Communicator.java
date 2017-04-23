@@ -902,14 +902,6 @@ public class Communicator implements Serializable {
         this.rmdup_run = rmdup_run;
     }
 
-    public boolean isRmdup_allReadsAsMerged() {
-        return rmdup_all_reads_as_merged;
-    }
-
-    public void setRmdup_allReadsAsMerged (boolean rmdup_all_reads_as_merged) {
-        this.rmdup_all_reads_as_merged = rmdup_all_reads_as_merged;
-    }
-
     public boolean isSnpcapturedata() {
         return snpcapturedata;
     }
