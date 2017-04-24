@@ -282,8 +282,7 @@ public class Communicator implements Serializable {
         DNA_damage_calculator_to_use = "DamageProfiler";
         schmutzi_library_type = "double";
         bedfile = "/opt/snpcc/390KPos.bed";
-        gatk_standard_call_confidence = "50";
-        gatk_standard_emit_confidence = "10";
+        gatk_standard_call_confidence = "30";
         gatk_variantfilter_qualityfilter = "30";
         gatk_variantfilter_coveragefilter = "0";
         preseq_ccurve_stepsize = 1000;
