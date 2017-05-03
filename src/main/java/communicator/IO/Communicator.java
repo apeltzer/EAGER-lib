@@ -1251,8 +1251,14 @@ public class Communicator implements Serializable {
         return calc_capture_on_target;
     }
 
+
+    //To stay compatible with older XML files, we need to return something here if the object in the XML is parsed as NULL
     public String getMerge_tool() {
-        return merge_tool;
+        if(merge_tool == null) {
+            return "Clip&Merge";
+        } else {
+            return merge_tool;
+        }
     }
 
     public void setMerge_tool(String merge_tool) {
