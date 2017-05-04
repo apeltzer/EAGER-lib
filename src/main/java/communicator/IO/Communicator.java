@@ -266,7 +266,7 @@ public class Communicator implements Serializable {
         merge_tool = "Clip&Merge";
         merge_fwadaptor = "AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC";
         merge_bwadaptor = "AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTA";
-        merge_min_adapter_overlap = 3;
+        merge_min_adapter_overlap = 1;
         mapper_readgroup = "@RG\tID:ILLUMINA-52179E_0039_FC62HDBAAXX_1_1\tSM:48_2\tPL:illumina";
         mapper_seedlength = "32";
         mapper_mapquality_filter = "0";
