@@ -68,7 +68,7 @@ public class Communicator implements Serializable {
     private String merge_fwadaptor;
     private String merge_bwadaptor;
     private String merge_advanced;
-    private boolean merge_only_clipping;
+    private boolean merge_only_clipping = false;
     private String merge_type = "";
     private String merge_barcode3p = "0";
     private String merge_barcode5p = "0";
