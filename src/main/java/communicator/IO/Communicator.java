@@ -1180,7 +1180,7 @@ public class Communicator implements Serializable {
         this.merge_keep_only_merged = merge_keep_only_merged;
     }
 
-    public boolean isQaulityBase64() {
+    public boolean isQualityBase64() {
       return qualitybase64;
     }
 
