@@ -73,6 +73,7 @@ public class Communicator implements Serializable {
     private String merge_barcode3p = "0";
     private String merge_barcode5p = "0";
     private boolean merge_keep_only_merged = false;
+    private boolean qualitybase64 = false;
 
     /**
      * 2-QualityTrimmer
@@ -1177,6 +1178,14 @@ public class Communicator implements Serializable {
 
     public void setMerge_keep_only_merged(boolean merge_keep_only_merged) {
         this.merge_keep_only_merged = merge_keep_only_merged;
+    }
+
+    public boolean isQualityBase64() {
+      return qualitybase64;
+    }
+
+    public void setQualityBase64(boolean qualitybase64) {
+      this.qualitybase64 = qualitybase64;
     }
 
     public String getPmdtools_advanced() {
